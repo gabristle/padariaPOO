@@ -1,3 +1,6 @@
+//Ronaldo Adriano de Azevedo Júnior
+//2101483
+
 public class Pedido {
     private String nomeCliente;
     private int comanda;
@@ -11,15 +14,15 @@ public class Pedido {
         return nomeCliente;
     }
 
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
+    public void setNomeCliente(String nomeCliente){
+        this.nomeCliente = nomeCliente; 
     }
 
     public int getComanda() {
         return comanda;
     }
 
-    public void setComanda(int comanda) {
+    public void setComanda(int comanda){
         this.comanda = comanda;
     }
 }

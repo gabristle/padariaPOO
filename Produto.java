@@ -1,9 +1,15 @@
+//Ronaldo Adriano de Azevedo Júnior
+//2101483
+
 public abstract class Produto{
     private String nome;
     private float preco;
     private float precoAVista;
     private Pedido pedido;    
     
+    //sobrescrita
+    public abstract void impNota();
+
     public Produto(){
         nome = "";
         preco = 0;
@@ -11,7 +17,7 @@ public abstract class Produto{
         pedido = new Pedido();
     }
     
-    public Pedido getPedido() {
+    public Pedido getPedido(){
         return pedido;
     }
 
@@ -42,6 +48,4 @@ public abstract class Produto{
     public void setPrecoAVista(float precoAVista) {
         this.precoAVista = precoAVista;
     }
-
-    public abstract void impNota();
 }

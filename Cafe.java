@@ -1,3 +1,6 @@
+//Ronaldo Adriano de Azevedo Júnior
+//2101483
+
 public class Cafe extends Produto implements VariacaoPreco{
     private String leite;
     private int tamanho;
@@ -25,6 +28,7 @@ public class Cafe extends Produto implements VariacaoPreco{
         this.tamanho = tamanho;
     }
 
+    //sobrecarga
     public void switchCafe(char opcao){
         switch(opcao){
             case 'S':
@@ -49,6 +53,7 @@ public class Cafe extends Produto implements VariacaoPreco{
         }
     }
 
+    //sobrecarga
     public void switchCafe(int opcao){
         switch(opcao){
             case 1:
@@ -69,6 +74,18 @@ public class Cafe extends Produto implements VariacaoPreco{
         }
     }
 
+    public final float precosCafe(){
+        if(getTamanho() == 100){
+            setPreco(2);
+        } else if(getTamanho() == 250){
+            setPreco(4.5f);
+        } else if(getTamanho() == 400){
+            setPreco(7);
+        }
+        return getPreco();
+    }
+
+    //sobrescrita
     public void impNota() {
         System.out.println("-------------------------");
         System.out.println("=========================");
@@ -82,8 +99,8 @@ public class Cafe extends Produto implements VariacaoPreco{
         System.out.println("Valor: " +getPreco());
         System.out.println("Valor a Vista: " +getPrecoAVista());
         System.out.println("=========================");
-        System.out.println("NOME: " +getPedido.getNomeCliente());
-        System.out.println("COMANDA: " +getPedido.getComanda());
+        System.out.println("NOME: " +getPedido().getNomeCliente());
+        System.out.println("COMANDA: " +getPedido().getComanda());
         System.out.println("-------------------------");
     }
 
