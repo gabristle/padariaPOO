@@ -82,6 +82,7 @@ public class Principal{
                     System.out.println("G - Grande (3kg)");
                     bolo.switchBolo(l.entDados("Selecione o tamanho do bolo:").charAt(0));
                 }while(bolo.getTamanho() != 1 && bolo.getTamanho() != 2 && bolo.getTamanho() != 3);
+                bolo.impNota();
                 break;
 
                 case 2:
@@ -107,6 +108,7 @@ public class Principal{
                         System.out.println("Deve digitar um numero!");
                     }
                 }while(cafe.getTamanho() != 1 && cafe.getTamanho() != 2 && cafe.getTamanho() != 3);
+                cafe.impNota();
                 break;
 
                 case 3:
@@ -137,6 +139,7 @@ public class Principal{
                         mce.impMuitosCaracException();
                     }
                 }
+                salgado.impNota();
                 break;
 
                 case 4:
