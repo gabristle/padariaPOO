@@ -24,12 +24,15 @@ public class Principal{
             System.out.println("2 - Cafe");
             System.out.println("3 - Salgado");
             System.out.println("4 - Sair");
-            try{
-                opcao = Integer.parseInt(l.entDados("Digite sua opcao:  "));
-                break;
-            }
-            catch(NumberFormatException nfe){
-                System.out.println("Deve digitar um numero!");
+            while(vai){
+                try{
+                    opcao = Integer.parseInt(l.entDados("Digite sua opcao:  "));
+                    break;
+                }
+                catch(NumberFormatException nfe){
+                    System.out.println("Deve digitar um numero!");
+                }
+
             }
             switch(opcao){
                 case 1:
@@ -107,7 +110,8 @@ public class Principal{
                     catch(NumberFormatException nfe){
                         System.out.println("Deve digitar um numero!");
                     }
-                }while(cafe.getTamanho() != 1 && cafe.getTamanho() != 2 && cafe.getTamanho() != 3);
+                }while(cafe.getTamanho() != 100 && cafe.getTamanho() != 250 && cafe.getTamanho() != 400);
+
                 cafe.impNota();
                 break;
 

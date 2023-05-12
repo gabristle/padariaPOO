@@ -129,7 +129,7 @@ public class Bolo extends Produto implements VariacaoPreco{
     }
 
     public float descontoAVista() {
-        setPrecoAVista(getPreco()-(getPreco()*0.15f));
+        setPrecoAVista(precoBolo()-(precoBolo()*0.15f));
         return getPrecoAVista();
     }
 
@@ -146,8 +146,8 @@ public class Bolo extends Produto implements VariacaoPreco{
         System.out.println("Cobertura: " +getCobertura());
         System.out.println("Tamanho: " +getTamanho());
         System.out.println("=========================");
-        System.out.println("Valor: " +getPreco());
-        System.out.println("Valor a Vista: " +getPrecoAVista());
+        System.out.println("Valor: " +precoBolo());
+        System.out.println("Valor a Vista: " +descontoAVista());
         System.out.println("=========================");
         System.out.println("NOME: " +getPedido().getNomeCliente());
         System.out.println("COMANDA: " +getPedido().getComanda());

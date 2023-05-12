@@ -10,11 +10,7 @@ public class Cafe extends Produto implements VariacaoPreco{
         tamanho = 0;
     }
 
-    public float descontoAVista() {
-        setPrecoAVista(getPreco()-(getPreco()*0.05f));
-        return getPrecoAVista();
-    }
-
+    
     public String getLeite() {
         return leite;
     }
@@ -84,6 +80,10 @@ public class Cafe extends Produto implements VariacaoPreco{
         }
         return getPreco();
     }
+    public float descontoAVista() {
+        setPrecoAVista(precosCafe()-(precosCafe()*0.05f));
+        return getPrecoAVista();
+    }
 
     //sobrescrita
     public void impNota() {
@@ -96,8 +96,8 @@ public class Cafe extends Produto implements VariacaoPreco{
         System.out.println("Leite? " +getLeite());
         System.out.println("Tamanho: " +getTamanho() + "ml");
         System.out.println("=========================");
-        System.out.println("Valor: " +getPreco());
-        System.out.println("Valor a Vista: " +getPrecoAVista());
+        System.out.println("Valor: " +precosCafe());
+        System.out.println("Valor a Vista: " +descontoAVista());
         System.out.println("=========================");
         System.out.println("NOME: " +getPedido().getNomeCliente());
         System.out.println("COMANDA: " +getPedido().getComanda());
